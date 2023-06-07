@@ -39,7 +39,6 @@ public class LocalProcessor {
 
     @ListIteratorAnnotation
     public void listIterator(List<String> stringList) {
-
         for (String s : stringList) {
             if (s != null) {
                 logger.info(String.valueOf(s.hashCode()));
@@ -56,7 +55,7 @@ public class LocalProcessor {
     }
 
     @ReadFullProcessorNameAnnotation
-    public void readFullProcessorName(File file) throws FileNotFoundException {
+    public void readFullProcessorName(File file){
         try {
             informationScanner = new Scanner(file);
             while (informationScanner.hasNext()) {
